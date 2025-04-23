@@ -1,0 +1,23 @@
+/* styles/NavBar.module.css */
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem; background: #004080; color: white;
+}
+.logo {
+  font-weight: bold; font-size: 1.25rem; color: white;
+}
+.hamburger {
+  display: none; font-size: 1.5rem; background: none; border: none; color: white;
+}
+.nav a {
+  margin-left: 1rem; color: white; text-decoration: none;
+}
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .nav {
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #004080; flex-direction: column; display: none;
+  }
+  .nav.show { display: flex; }
+  .nav a { margin: 1rem; }
+}
